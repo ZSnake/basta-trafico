@@ -1,9 +1,5 @@
-// var homeController = require('./controllers/homeController');
-// var postsController = require('./controllers/postsController');
-//
-// exports.endpoints = [{method: 'GET', path: '/{param*}', config: homeController.home},
-// 					 {method: 'POST', path: '/api/post', config: postsController.newPost},
-// 					 {method: 'GET', path: '/api/posts', config: postsController.getAll},
-// 					 {method: 'GET', path: '/api/posts/{id}', config: postsController.getById},
-// 				 	 {method: 'PUT', path: '/api/posts/{id}', config: postsController.editPost},
-// 				 	 {method: 'DELETE', path: '/api/posts/{id}', config: postsController.removePost}];
+var homeController = require('./controllers/homeController');
+var positionsController = require('./controllers/positionsController');
+
+exports.endpoints = [{method: 'GET', path: '/{param*}', config: homeController.home},
+                     {method: 'POST', path: '/api/position', config: positionsController.newPosition}];
