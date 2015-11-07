@@ -1,7 +1,5 @@
 exports.home = {
-	handler:{
-				directory: {
-					path: ['../client/app', '../client/bower_components']
-				}
-			}
+	handler: function(request, reply){
+  		return reply('Maldito trafico');
+	}
 }

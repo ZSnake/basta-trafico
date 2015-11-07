@@ -6,6 +6,7 @@ exports.newVehicle = {
 			licenseNumber: request.payload.licenseNumber,
 	    vehicleType: request.payload.vehicleType,
 	    positions: [],
+			actions: [],
 			points: 0
 		});
 		newPosition.save();
@@ -28,17 +29,3 @@ exports.getVehicleById = {
 		console.log(request.params.vehicleId);
 	}
 }
-
- exports.changePoints = {
-	 handler: function(request, reply){
-		 vehicle.update({
-			 _id: request.params.vehicleId
-		 }, {$inc: {
-			 points: request.payload.points
-		 }}, function(err){
-			 if(err)
-			 	console.log("Error editing vehicles points: " + err);
-			 return reply('ok');
-		 })
-	 }
- }
