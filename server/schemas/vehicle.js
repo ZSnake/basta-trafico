@@ -3,8 +3,8 @@ var position = require('./position');
 
 var VehicleSchema = new mongoose.Schema({
    	licenseNumber: String,
-    vehiculeType: String,
-    point: Number,
+    vehicleType: String,
+    points: Number,
     positions: [{type: mongoose.Schema.Types.ObjectId, ref: 'Position'}]
 });
 

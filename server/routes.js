@@ -6,4 +6,5 @@ exports.endpoints = [{method: 'GET', path: '/{param*}', config: homeController.h
                      {method: 'POST', path: '/api/position/{vehicleId}', config: positionsController.newPosition},
                      {method: 'GET', path: '/api/positions/{vehicleId}', config: positionsController.getAllByVehicle},
                      {method: 'POST', path: '/api/vehicle', config: vehiclesController.newVehicle},
-                     {method: 'GET', path: '/api/vehicle/{vehicleId}', config: vehiclesController.getVehicleById}];
+                     {method: 'GET', path: '/api/vehicle/{vehicleId}', config: vehiclesController.getVehicleById},
+                     {method: 'PUT', path: '/api/vehicle/{vehicleId}/changePoints', config: vehiclesController.changePoints}];
