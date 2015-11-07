@@ -33,9 +33,9 @@ exports.getVehicleById = {
 	 handler: function(request, reply){
 		 vehicle.update({
 			 _id: request.params.vehicleId
-		 }, {
+		 }, {$inc: {
 			 points: request.payload.points
-		 }, function(err){
+		 }}, function(err){
 			 if(err)
 			 	console.log("Error editing vehicles points: " + err);
 			 return reply('ok');
