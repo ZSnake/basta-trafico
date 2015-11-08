@@ -3,11 +3,11 @@ var mongoose = require('mongoose');
 var inert = require('inert');
 var routes = require('./routes');
 // Create a server with a host and port
-var server = new hapi.Server();
-server.connection({
-    //host: 'localhost',
-    port: process.env.PORT | 3000,
-});
+var server = new hapi.Server(~~process.env.PORT || 3000, '0.0.0.0');
+// server.connection({
+//     //host: 'localhost',
+//     port: process.env.PORT | 3000,
+// });
 
 mongoose.connect('mongodb://localhost/bastaTrafico');
 var db = mongoose.connection;
