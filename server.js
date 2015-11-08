@@ -5,8 +5,8 @@ var routes = require('./routes');
 // Create a server with a host and port
 var server = new hapi.Server();
 server.connection({
-    host: 'localhost',
-    port: 3000,
+    //host: 'localhost',
+    port: process.env.PORT | 3000,
 });
 
 mongoose.connect('mongodb://localhost/bastaTrafico');
